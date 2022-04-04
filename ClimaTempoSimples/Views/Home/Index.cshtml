@@ -61,9 +61,19 @@
     </div>
 </section>
 
+<hr width="150px"/>
+
 <div id="cidade_id">
-    <div style="width: 100%; text-align:right">
-        @Html.DropDownList("Cidades", null, new { @class = "form-control", @style = "margin-left: 850px" })
+    <div style = "margin-left: 860px">
+        Escolha uma Cidade:
+        @Html.DropDownList("Cidades", String.Format(" -- SELECIONE -- "))
+
+
+        @*
+          DROPDOWN LIST COM VISUAL FORM-CONTROL
+
+          @Html.DropDownList("Cidades", null, new { @class = "form-control", @style = "margin-left: 850px" })
+        *@
     </div>
     <br />
 
