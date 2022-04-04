@@ -8,3 +8,5 @@ Para criação e preenchimento da base de testes utilizar os scripts SQL disponi
 2 - Create Table.Sql
 
 3 - DadosClimaTempoSimples.SQL
+
+Obs:. Para inserir mais cidades no Dropdown basta alterar o campo @CID_IDS INT na linha 46 do script DadosClimaTempo  
