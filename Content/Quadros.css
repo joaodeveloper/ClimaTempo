@@ -1,0 +1,45 @@
+﻿.quadrinho {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #337cbc;
+    border-radius: 5px;
+    width: 100%;
+    margin: 5px;
+}
+
+.quadrao {
+    padding-bottom: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #337cbc;
+    border-radius: 5px;
+    width: 55%;
+    margin: 10px;
+}
+
+.quadrinhoInterno {
+    width: 100%;
+    background-color: #2196F3;
+    color: #FFFFFF;
+}
+
+.card-header-blue {
+    background-color: #2196F3;
+    color: #FFFFFF;
+    border-bottom: 3px solid #BBB;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 0px;
+    margin-top: 0px;
+    overflow: hidden;
+}
+
+.card-header {
+    width: 100%;
+    color: #2196F3;
+    border-bottom: 3px solid #BBB;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: 'Roboto', sans-serif;
+    padding: 0px;
+    margin-top: 0px;
+    overflow: hidden;
+}

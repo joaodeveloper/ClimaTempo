@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@Styles.Render("~/Content/Quadros.css")
+
+@section scripts{
+    <script src="~/Scripts/ClimaTempo.js"></script>
+}
+
+<br />
+
+<div class="jumbotron">
+    <h1>Clima tempo simples</h1>
+</div>
+
+<section>
+    <div style="display: flex; width: 100%; justify-content: left;">
+        <div class="card quadrao">
+            <div class="card-content">
+                <div class="card-header-blue">
+                    <h4 class="card-heading">Cidades mais quentes hoje <span class="glyphicon glyphicon-fire"></span></h4>
+                </div>
+                <div class="card-body">
+                    <p class="card-p">
+                        <div>
+                            @foreach (var cidade in ViewBag.CidadesMaisQuentes)
+                            {
+                                <div style="width: 100%; text-align:left">
+                                    @(cidade.Cidade.Nome)
+                                    Min:@(cidade.TemperaturaMinima)
+                                    Max:@(cidade.TemperaturaMaxima)
+                                </div>
+                            }
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card quadrao">
+            <div class="card-content">
+                <div class="card-header-blue">
+                    <h4 class="card-heading">Cidades mais frias hoje <span class="glyphicon glyphicon-cloud"></span></h4>
+                </div>
+                <div class="card-body">
+                    <p class="card-p">
+                        <div>
+                            @foreach (var cidade in ViewBag.CidadesMaisFrias)
+                            {
+                                <div style="width: 100%; text-align:left">
+                                    @(cidade.Cidade.Nome)     
+                                    Min:@(cidade.TemperaturaMinima) 	
+                                    Max:@(cidade.TemperaturaMaxima)
+                                </div>
+                            }
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="cidade_id">
+    <div style="width: 100%; text-align:right">
+        @Html.DropDownList("Cidades", null, new { @class = "form-control", @style = "margin-left: 850px" })
+    </div>
+    <br />
+
+    <div id="cidadeEscolhida">
+        @*
+        Adiciona o Titulo "Previsão para os próximos sete dias na cidade de (CIDADE SELECIONADA)"
+        *@
+    </div>
+    <br />
+</div>
+
+<section>
+    <div id="info" style="display: flex;">
+
+    </div>
+</section>
+
